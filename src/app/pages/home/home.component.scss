@@ -1,0 +1,17 @@
+.main {
+  background-color: #f3f5f9;
+  width: 100%;
+  height: calc(100vh - 70px);
+
+  .container {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+
+
+  .head{
+    padding: 3rem 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}

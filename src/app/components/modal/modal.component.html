@@ -1,0 +1,11 @@
+  <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <span>¿Estas seguro de eliminar el producto {{data.name}}?</span>
+      <div class="modal-buttons">
+        <hr>
+        <div class="buttons-container">
+          <button class="btn-secundary btn-modal" (click)="onClose()">Cancelar</button>
+          <button class="btn-primary btn-modal" (click)="onConfirm(data.id)">Confirmar</button>
+        </div>
+    </div>
+  </div>

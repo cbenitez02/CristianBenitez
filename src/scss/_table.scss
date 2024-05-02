@@ -1,0 +1,73 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  thead {
+    th {
+      text-align: left;
+      font-weight: bold;
+      position: relative;
+      background-color: #f9fafc;
+      width: calc((100% - 25px) / 5);
+
+      &:first-child {
+        text-align: center;
+        vertical-align: middle;
+        width: 130px;
+      }
+
+      &:last-child {
+        width: 25px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -10px;
+        width: 10px; 
+        background-color: white; 
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+
+  tbody{
+    td {
+      padding: .5rem 0;
+      width: calc((100% - 25px) / 5);
+      color: #363636;
+
+      &:first-child {
+        text-align: center;
+        vertical-align: middle;
+        width: 130px;
+      }
+
+      &:last-child {
+        width: 25px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      position: relative;
+      overflow: visible;
+    }
+  }
+
+  tr {
+    height: 45px;
+    border-bottom: 2px solid #f7f7f7;
+
+    &:hover {
+      background-color: #f5f5f5; // Cambia este color al que desees para el efecto hover
+    }
+  }
+}

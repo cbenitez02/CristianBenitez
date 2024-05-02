@@ -1,0 +1,57 @@
+.main {
+  background-color: #f3f5f9;
+  width: 100%;
+  height: calc(100vh - 70px);
+  padding-top: 3rem;
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  .title{
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0 1.4rem 0;
+  }
+
+  hr {
+    height: 3px;
+    background-color: #ccc;
+  }
+  
+  .form {
+    padding: .5rem 2rem;
+
+    .row{
+      column-gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .button-container {
+      display: flex;
+      column-gap: 3rem;
+      justify-content: center;
+      margin: 2rem;
+    }
+  }
+
+  .date-picker {
+    ::ng-deep {
+      input {
+        &:last-child {
+          width: 100%;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          border-radius: 4px;
+          height: 45px;
+        }
+      }
+    }
+  }
+  
+}

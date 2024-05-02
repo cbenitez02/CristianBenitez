@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+
+.modal {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+
+.modal .modaltext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: white;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  right: -60px;
+  font-size: 14px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+
+  a{
+    padding: 5px 8px;
+  }
+
+  a:hover {
+    border-radius: 2px;
+    background-color: rgba($color: $primary-hover, $alpha: 0.3);
+    
+  }
+
+  a:last-child:hover {
+    background-color: #FFCCCC;
+  }
+}
+
+.modaltext {
+  visibility: visible;
+}

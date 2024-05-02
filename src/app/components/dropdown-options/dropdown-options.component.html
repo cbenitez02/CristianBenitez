@@ -1,0 +1,11 @@
+<div class="modal" (click)="toggleDropdown(product.id)">
+  <img 
+    class="dots" 
+    src="../../../assets/img/dots.svg" 
+    alt="dots"
+  >
+  <div class="modaltext" [style.visibility]="showOptions && product.id === currentProductId ? 'visible' : 'hidden'">
+    <a [routerLink]="['edit', product.id]">Editar</a>
+    <a (click)="onDelete(product)">Eliminar</a>
+  </div>
+</div>

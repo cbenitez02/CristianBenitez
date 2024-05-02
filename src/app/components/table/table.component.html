@@ -1,0 +1,55 @@
+<div class="main">
+  <app-table-skeleton *ngIf="isLoading"></app-table-skeleton>
+  <table class="table" *ngIf="!isLoading">
+    <thead>
+      <tr>
+        <th>Logo</th>
+        <th>Nombre del producto</th>
+        <th>Descripción 
+          <div class="tooltip">
+            <img src="assets/img/tooltip.svg" alt="tooltip">
+            <span class="tooltiptext">Descripción</span>
+          </div>
+        </th>
+        <th>Fecha de liberación 
+          <div class="tooltip">
+            <img src="assets/img/tooltip.svg" alt="tooltip">
+            <span class="tooltiptext">Fecha de liberación</span>
+          </div>
+        </th>
+        <th>Fecha de reestructuración 
+          <div class="tooltip">
+            <img src="assets/img/tooltip.svg" alt="tooltip">
+            <span class="tooltiptext">Fecha de reestructuración</span>
+          </div>
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="productsLength > 0">
+      <tr *ngFor="let product of products">
+        <td><img height="20" [src]="product.logo" [alt]="product.name" /> </td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.date_release  | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ product.date_revision | date: 'dd/MM/yyyy' }}</td>
+        <td >      
+          <app-dropdown-options [product]="product" (onDeleteEvent)="openDelete($event)"></app-dropdown-options>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer class="footer" *ngIf="!isLoading">
+    <span class="result">
+      {{ productsLength }} Resultados
+    </span>
+    <div class="selector">
+      <select (change)="onChangeSelect(select.value)" #select >
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+  </footer>
+</div>

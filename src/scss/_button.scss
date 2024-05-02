@@ -1,0 +1,73 @@
+@import 'variables';
+
+/* BUTTONS*/
+.btn-primary {
+  display: flex;
+  height: 40px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  color: $blue500;
+  background-color: $primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 150ms;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+
+.btn-secundary {
+  display: flex;
+  height: 40px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid $blue300;
+  color: $blue500;
+  background-color: $secundary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secundary-hover;
+  }
+}
+
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dots {
+  transform: rotate(90deg);
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  display: block;  
+  text-align: left;
+  cursor: pointer;
+}
+
+a:link,
+a:visited,
+a:focus {
+  color: $blue500;
+}
+
+

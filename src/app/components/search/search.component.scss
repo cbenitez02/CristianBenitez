@@ -1,0 +1,8 @@
+.search {
+  width: 220px;
+
+  &:hover,
+  &:focus-within{
+    border-radius: 4px;
+  }
+}

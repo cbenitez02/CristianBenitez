@@ -1,0 +1,83 @@
+<app-header />
+<main class="main">
+  <div class="container">
+    <h1 class="title">Editar Producto</h1>
+    <hr>
+    <br>
+    <form 
+      class="form" 
+      [formGroup]="updateForm">
+      
+      <!-- col 1 -->
+      <div class="row">
+        <div class="w-50">
+          <label for="id">ID</label>
+          <input class="disabled" type="text" id="id" formControlName="id" readonly>
+          <span *ngIf="isValidField('id')" class="error-label">
+            {{ getFieldError('id') }}
+          </span>
+        </div>
+        <div class="w-50">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" formControlName="name">
+          <span *ngIf="isValidField('name')" class="error-label">
+            {{ getFieldError('name') }}
+          </span>
+        </div>
+      </div>
+
+      <!-- col 2 -->
+      <div class="row">
+        <div class="w-50">
+          <label for="description">Descripción</label>
+          <input type="text" id="description" formControlName="description">
+          <span *ngIf="isValidField('description')" class="error-label">
+            {{ getFieldError('description') }}
+          </span>
+        </div>
+        <div class="w-50">
+          <label for="logo">Logo</label>
+          <input type="text" id="logo" formControlName="logo">
+          <span *ngIf="isValidField('logo')" class="error-label">
+            {{ getFieldError('logo') }}
+          </span>
+        </div>
+      </div>
+
+      <!-- col 3 -->
+      <div class="row">
+        <div class="w-50">
+          <label for="date_release">Fecha liberación</label>
+          <input 
+            type="date" 
+            id="date_release" 
+            formControlName="date_release" 
+            (change)="onChangeDate()"
+            class="date-picker"
+            style="width: 100% !important;"
+            [min]="this.product.date_revision | date : 'yyyy-MM-dd'"
+            >
+            <span *ngIf="isValidField('date_release')" class="error-label">
+              {{ getFieldError('date_release') }}
+            </span>
+        </div>
+        <div class="w-50">
+          <label for="date_revision">Fecha Revisión</label>
+          <input class="disabled" type="text" id="date_revision" formControlName="date_revision" readonly>
+        </div>
+      </div>
+
+      <!-- Bottons -->
+      <div class="button-container">
+        <button class="btn-secundary" (click)="resetForm()">Reiniciar</button>
+        <button 
+          class="btn-primary" 
+          (click)="updateProductSer()" 
+          [disabled]="updateForm.invalid" 
+          type="submit">Enviar</button>
+      </div>
+
+
+    </form>
+  </div>
+</main>
