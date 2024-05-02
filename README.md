@@ -1,4 +1,4 @@
-# DevsuTest
+# Project for Devsu
 Project realized by Cristian Benitez for Devsu's technical test.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
@@ -17,4 +17,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io).
-Run `npm run test:coverage` to execute the coverage
+Run `npm run test:coverage` to execute the coverage.
